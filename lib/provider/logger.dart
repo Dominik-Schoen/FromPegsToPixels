@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:path/path.dart' as path;
@@ -22,7 +23,7 @@ class Logger extends _$Logger {
     ByteData imageData = await image;
     final buffer = imageData.buffer;
     final Directory downloadsDir = await getApplicationDocumentsDirectory();
-    String filePath = (path.join(downloadsDir.path, fileName));
+    String filePath = (path.join(downloadsDir.path, DateFormat("yyyy-MM-dd_HH-mm-ss_").format(DateTime.now()) + fileName));
     await File(filePath).writeAsBytes(
         buffer.asUint8List(imageData.offsetInBytes, imageData.lengthInBytes));
     debugPrint("Save image with ${imageData.lengthInBytes} bytes to $filePath");

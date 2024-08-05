@@ -53,9 +53,21 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
         },
         child: Column(
           children: [
-            const Image(
-              height: 200,
-              image: AssetImage('assets/img/muster1.png'),
+            const Stack(
+              alignment: Alignment.bottomCenter,
+              children: [
+                Text(
+                  "Copy this image to the area below",
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 109, 109, 109),
+                    fontSize: 16,
+                  ),
+                ),
+                Image(
+                  height: 200,
+                  image: AssetImage('assets/img/muster1.png'),
+                ),
+              ]
             ),
             const Divider(thickness: 3,),
             Expanded(
