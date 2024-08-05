@@ -1,14 +1,16 @@
+import 'package:fartigue/provider/logger.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scribble/scribble.dart';
 
-class ScribbleView extends StatefulWidget {
+class ScribbleView extends ConsumerStatefulWidget {
   const ScribbleView({super.key});
 
   @override
-  State<ScribbleView> createState() => _ScribbleViewState();
+  ConsumerState<ScribbleView> createState() => _ScribbleViewState();
 }
 
-class _ScribbleViewState extends State<ScribbleView> {
+class _ScribbleViewState extends ConsumerState<ScribbleView> {
   late ScribbleNotifier notifier;
 
   @override
@@ -28,11 +30,14 @@ class _ScribbleViewState extends State<ScribbleView> {
           FilledButton.tonal(
             onPressed: () {
               notifier.clear();
-            }, 
+            },
             child: const Text("clear"),
           ),
           FilledButton(
-            onPressed: () {}, 
+            onPressed: () {
+              ref.read(loggerProvider.notifier).saveImage(notifier.renderImage(), "test.png");
+              //notifier.renderImage();
+            },
             child: const Row(
               children: [
                 Text("next"),
@@ -44,10 +49,21 @@ class _ScribbleViewState extends State<ScribbleView> {
       ),
       body: Listener(
         onPointerMove: (event) {
-          print("pressure: ${event.pressure}");
+          ref.read(loggerProvider.notifier).logPointerMoveEvent(event);
         },
-        child: Scribble(
-          notifier: notifier,
+        child: Column(
+          children: [
+            const Image(
+              height: 200,
+              image: AssetImage('assets/img/muster1.png'),
+            ),
+            const Divider(thickness: 3,),
+            Expanded(
+              child: Scribble(
+                notifier: notifier,
+              ),
+            ),
+          ],
         ),
       ),
     );
