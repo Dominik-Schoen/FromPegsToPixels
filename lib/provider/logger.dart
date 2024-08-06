@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:fartigue/provider/logger_state.dart';
@@ -29,10 +30,6 @@ class Logger extends _$Logger {
     );
   }
 
-  void logPointerMoveEvent(PointerMoveEvent e) {
-    debugPrint("pressure: ${e.pressure}");
-  }
-
   void savePressureTimeSeries(List<double> pressureTs) {
     state = state.copyWith(pressureTimeSeries: pressureTs);
   }
@@ -41,14 +38,29 @@ class Logger extends _$Logger {
     ByteData imageData = await image;
     final buffer = imageData.buffer;
     final Directory downloadsDir = await getApplicationDocumentsDirectory();
-    String filePath =
-        (path.join(downloadsDir.path, _getFileNamePrefix() + fileName));
+    String filePath = (path.join(downloadsDir.path, _getFileNamePrefix() + fileName));
     await File(filePath).writeAsBytes(
         buffer.asUint8List(imageData.offsetInBytes, imageData.lengthInBytes));
+    state = state.copyWith(files: [...state.files, fileName]);
     debugPrint("Save image with ${imageData.lengthInBytes} bytes to $filePath");
+  }
+
+  Future saveMetaFile(String fileName) async {
+    final jsonString = jsonEncode(state.toJson());
+    final Directory downloadsDir = await getApplicationDocumentsDirectory();
+    final filePath = (path.join(downloadsDir.path, _getFileNamePrefix() + fileName));
+    await File(filePath).writeAsString(jsonString);
+    debugPrint("Saved meta file to $filePath");
   }
 
   String _getFileNamePrefix() {
     return "${state.participantID}_${state.startTime}";
+  }
+
+  void reset() {
+    state = LoggerState(
+      participantID: "-1",
+      startTime: DateTime.now().toString(),
+    );
   }
 }

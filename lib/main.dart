@@ -1,13 +1,18 @@
 import 'package:fartigue/participant_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:flutter/services.dart';
 
 void main() {
-  runApp(
-    const ProviderScope(
-      child: FartigueApp(),
-    ),
-  );
+  WidgetsFlutterBinding.ensureInitialized();
+
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((value) {
+    runApp(
+      const ProviderScope(
+        child: FartigueApp(),
+      ),
+    );
+  });
 }
 
 class FartigueApp extends StatelessWidget {

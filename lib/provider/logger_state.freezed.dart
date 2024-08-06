@@ -14,12 +14,18 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
+LoggerState _$LoggerStateFromJson(Map<String, dynamic> json) {
+  return _LoggerState.fromJson(json);
+}
+
 /// @nodoc
 mixin _$LoggerState {
   String get participantID => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
   List<double> get pressureTimeSeries => throw _privateConstructorUsedError;
+  List<String> get files => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $LoggerStateCopyWith<LoggerState> get copyWith =>
       throw _privateConstructorUsedError;
@@ -34,7 +40,8 @@ abstract class $LoggerStateCopyWith<$Res> {
   $Res call(
       {String participantID,
       String startTime,
-      List<double> pressureTimeSeries});
+      List<double> pressureTimeSeries,
+      List<String> files});
 }
 
 /// @nodoc
@@ -53,6 +60,7 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
     Object? participantID = null,
     Object? startTime = null,
     Object? pressureTimeSeries = null,
+    Object? files = null,
   }) {
     return _then(_value.copyWith(
       participantID: null == participantID
@@ -67,6 +75,10 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
           ? _value.pressureTimeSeries
           : pressureTimeSeries // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      files: null == files
+          ? _value.files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -82,7 +94,8 @@ abstract class _$$LoggerStateImplCopyWith<$Res>
   $Res call(
       {String participantID,
       String startTime,
-      List<double> pressureTimeSeries});
+      List<double> pressureTimeSeries,
+      List<String> files});
 }
 
 /// @nodoc
@@ -99,6 +112,7 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
     Object? participantID = null,
     Object? startTime = null,
     Object? pressureTimeSeries = null,
+    Object? files = null,
   }) {
     return _then(_$LoggerStateImpl(
       participantID: null == participantID
@@ -113,18 +127,27 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
           ? _value._pressureTimeSeries
           : pressureTimeSeries // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      files: null == files
+          ? _value._files
+          : files // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
 
 /// @nodoc
-
+@JsonSerializable()
 class _$LoggerStateImpl implements _LoggerState {
   const _$LoggerStateImpl(
       {required this.participantID,
       required this.startTime,
-      final List<double> pressureTimeSeries = const []})
-      : _pressureTimeSeries = pressureTimeSeries;
+      final List<double> pressureTimeSeries = const [],
+      final List<String> files = const []})
+      : _pressureTimeSeries = pressureTimeSeries,
+        _files = files;
+
+  factory _$LoggerStateImpl.fromJson(Map<String, dynamic> json) =>
+      _$$LoggerStateImplFromJson(json);
 
   @override
   final String participantID;
@@ -140,9 +163,18 @@ class _$LoggerStateImpl implements _LoggerState {
     return EqualUnmodifiableListView(_pressureTimeSeries);
   }
 
+  final List<String> _files;
+  @override
+  @JsonKey()
+  List<String> get files {
+    if (_files is EqualUnmodifiableListView) return _files;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_files);
+  }
+
   @override
   String toString() {
-    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeries: $pressureTimeSeries)';
+    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeries: $pressureTimeSeries, files: $files)';
   }
 
   @override
@@ -155,25 +187,42 @@ class _$LoggerStateImpl implements _LoggerState {
             (identical(other.startTime, startTime) ||
                 other.startTime == startTime) &&
             const DeepCollectionEquality()
-                .equals(other._pressureTimeSeries, _pressureTimeSeries));
+                .equals(other._pressureTimeSeries, _pressureTimeSeries) &&
+            const DeepCollectionEquality().equals(other._files, _files));
   }
 
+  @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(runtimeType, participantID, startTime,
-      const DeepCollectionEquality().hash(_pressureTimeSeries));
+  int get hashCode => Object.hash(
+      runtimeType,
+      participantID,
+      startTime,
+      const DeepCollectionEquality().hash(_pressureTimeSeries),
+      const DeepCollectionEquality().hash(_files));
 
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
   _$$LoggerStateImplCopyWith<_$LoggerStateImpl> get copyWith =>
       __$$LoggerStateImplCopyWithImpl<_$LoggerStateImpl>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$LoggerStateImplToJson(
+      this,
+    );
+  }
 }
 
 abstract class _LoggerState implements LoggerState {
   const factory _LoggerState(
       {required final String participantID,
       required final String startTime,
-      final List<double> pressureTimeSeries}) = _$LoggerStateImpl;
+      final List<double> pressureTimeSeries,
+      final List<String> files}) = _$LoggerStateImpl;
+
+  factory _LoggerState.fromJson(Map<String, dynamic> json) =
+      _$LoggerStateImpl.fromJson;
 
   @override
   String get participantID;
@@ -181,6 +230,8 @@ abstract class _LoggerState implements LoggerState {
   String get startTime;
   @override
   List<double> get pressureTimeSeries;
+  @override
+  List<String> get files;
   @override
   @JsonKey(ignore: true)
   _$$LoggerStateImplCopyWith<_$LoggerStateImpl> get copyWith =>

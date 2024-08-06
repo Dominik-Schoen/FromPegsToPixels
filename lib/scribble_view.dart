@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:fartigue/participant_view.dart';
+import 'package:fartigue/borg_view.dart';
 import 'package:fartigue/provider/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -114,11 +114,10 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
   void moveToNextView() {
     List<ScribbleType> remainingTasks = widget.taskTypeList.sublist(1);
     if (remainingTasks.isEmpty) {
-      // TODO: move to borg view and save all meta data
-      Navigator.pushReplacement(
+      Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (_) => const ParticipantView(),
+          builder: (_) => const BorgView(),
         ),
       );
     } else {
