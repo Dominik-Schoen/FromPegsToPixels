@@ -1,4 +1,4 @@
-import 'package:fartigue/scribble_view.dart';
+import 'package:fartigue/participant_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -17,7 +17,7 @@ class FartigueApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ScribbleView()
+      home: ParticipantView(),
     );
   }
 }

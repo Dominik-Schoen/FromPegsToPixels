@@ -1,10 +1,23 @@
+import 'dart:math';
+
+import 'package:fartigue/participant_view.dart';
 import 'package:fartigue/provider/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:scribble/scribble.dart';
 
+enum ScribbleType {
+  loops,
+  pentagons;
+
+  @override
+  String toString() => name;
+}
+
 class ScribbleView extends ConsumerStatefulWidget {
-  const ScribbleView({super.key});
+  final List<ScribbleType> taskTypeList;
+
+  const ScribbleView({required this.taskTypeList, super.key});
 
   @override
   ConsumerState<ScribbleView> createState() => _ScribbleViewState();
@@ -12,6 +25,7 @@ class ScribbleView extends ConsumerStatefulWidget {
 
 class _ScribbleViewState extends ConsumerState<ScribbleView> {
   late ScribbleNotifier notifier;
+  final List<double> pressureTimeSeries = [];
 
   @override
   void initState() {
@@ -22,6 +36,10 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
 
   @override
   Widget build(BuildContext context) {
+    final String taskFilePath = widget.taskTypeList[0] == ScribbleType.loops
+        ? 'assets/img/muster2.png'
+        : 'assets/img/muster1.png';
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Copy the shown image"),
@@ -35,8 +53,8 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
           ),
           FilledButton(
             onPressed: () {
-              ref.read(loggerProvider.notifier).saveImage(notifier.renderImage(), "test.png");
-              //notifier.renderImage();
+              saveData();
+              moveToNextView();
             },
             child: const Row(
               children: [
@@ -49,27 +67,26 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
       ),
       body: Listener(
         onPointerMove: (event) {
-          ref.read(loggerProvider.notifier).logPointerMoveEvent(event);
+          logPointerMoveEvent(event);
         },
         child: Column(
           children: [
-            const Stack(
-              alignment: Alignment.bottomCenter,
-              children: [
-                Text(
-                  "Copy this image to the area below",
-                  style: TextStyle(
-                    color: Color.fromARGB(255, 109, 109, 109),
-                    fontSize: 16,
-                  ),
+            Stack(alignment: Alignment.bottomCenter, children: [
+              const Text(
+                "Copy this image to the area below",
+                style: TextStyle(
+                  color: Color.fromARGB(255, 109, 109, 109),
+                  fontSize: 16,
                 ),
-                Image(
-                  height: 200,
-                  image: AssetImage('assets/img/muster1.png'),
-                ),
-              ]
+              ),
+              Image(
+                height: 200,
+                image: AssetImage(taskFilePath),
+              ),
+            ]),
+            const Divider(
+              thickness: 3,
             ),
-            const Divider(thickness: 3,),
             Expanded(
               child: Scribble(
                 notifier: notifier,
@@ -79,5 +96,53 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
         ),
       ),
     );
+  }
+
+  void logPointerMoveEvent(PointerMoveEvent e) {
+    pressureTimeSeries.add(e.pressure);
+  }
+
+  void saveData() {
+    ref.read(loggerProvider.notifier).saveImage(notifier.renderImage(),
+        "${widget.taskTypeList[0].toString()}_scribble.png");
+
+    ref
+        .read(loggerProvider.notifier)
+        .savePressureTimeSeries(pressureTimeSeries);
+  }
+
+  void moveToNextView() {
+    List<ScribbleType> remainingTasks = widget.taskTypeList.sublist(1);
+    if (remainingTasks.isEmpty) {
+      // TODO: move to borg view and save all meta data
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (_) => const ParticipantView(),
+        ),
+      );
+    } else {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (_) => ScribbleView(
+            taskTypeList: remainingTasks,
+          ),
+        ),
+      );
+    }
+  }
+}
+
+extension ScribbleTypeExtension on ScribbleType {
+  static List<ScribbleType> generateRandomOrder(int n) {
+    var rnd = Random();
+    return List.generate(
+        n, (i) => ScribbleType.values[rnd.nextInt(ScribbleType.values.length)]);
+  }
+
+  static List<ScribbleType> generateRandomUniqueOrder(int n) {
+    var list = List<ScribbleType>.from(ScribbleType.values)..shuffle();
+    return list.take(n).toList();
   }
 }
