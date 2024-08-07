@@ -29,6 +29,7 @@ mixin _$LoggerState {
   List<double> get orientationTimeSeriesLoops =>
       throw _privateConstructorUsedError;
   List<double> get tiltTimeSeriesLoops => throw _privateConstructorUsedError;
+  List<int> get timestampLoops => throw _privateConstructorUsedError;
   List<double> get pressureTimeSeriesPentagons =>
       throw _privateConstructorUsedError;
   List<double> get deltaDistanceTimeSeriesPentagons =>
@@ -37,6 +38,7 @@ mixin _$LoggerState {
       throw _privateConstructorUsedError;
   List<double> get tiltTimeSeriesPentagons =>
       throw _privateConstructorUsedError;
+  List<int> get timestampPentagons => throw _privateConstructorUsedError;
   List<String> get files => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -58,10 +60,12 @@ abstract class $LoggerStateCopyWith<$Res> {
       List<double> deltaDistanceTimeSeriesLoops,
       List<double> orientationTimeSeriesLoops,
       List<double> tiltTimeSeriesLoops,
+      List<int> timestampLoops,
       List<double> pressureTimeSeriesPentagons,
       List<double> deltaDistanceTimeSeriesPentagons,
       List<double> orientationTimeSeriesPentagons,
       List<double> tiltTimeSeriesPentagons,
+      List<int> timestampPentagons,
       List<String> files});
 }
 
@@ -84,10 +88,12 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
     Object? deltaDistanceTimeSeriesLoops = null,
     Object? orientationTimeSeriesLoops = null,
     Object? tiltTimeSeriesLoops = null,
+    Object? timestampLoops = null,
     Object? pressureTimeSeriesPentagons = null,
     Object? deltaDistanceTimeSeriesPentagons = null,
     Object? orientationTimeSeriesPentagons = null,
     Object? tiltTimeSeriesPentagons = null,
+    Object? timestampPentagons = null,
     Object? files = null,
   }) {
     return _then(_value.copyWith(
@@ -115,6 +121,10 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
           ? _value.tiltTimeSeriesLoops
           : tiltTimeSeriesLoops // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      timestampLoops: null == timestampLoops
+          ? _value.timestampLoops
+          : timestampLoops // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       pressureTimeSeriesPentagons: null == pressureTimeSeriesPentagons
           ? _value.pressureTimeSeriesPentagons
           : pressureTimeSeriesPentagons // ignore: cast_nullable_to_non_nullable
@@ -131,6 +141,10 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
           ? _value.tiltTimeSeriesPentagons
           : tiltTimeSeriesPentagons // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      timestampPentagons: null == timestampPentagons
+          ? _value.timestampPentagons
+          : timestampPentagons // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       files: null == files
           ? _value.files
           : files // ignore: cast_nullable_to_non_nullable
@@ -154,10 +168,12 @@ abstract class _$$LoggerStateImplCopyWith<$Res>
       List<double> deltaDistanceTimeSeriesLoops,
       List<double> orientationTimeSeriesLoops,
       List<double> tiltTimeSeriesLoops,
+      List<int> timestampLoops,
       List<double> pressureTimeSeriesPentagons,
       List<double> deltaDistanceTimeSeriesPentagons,
       List<double> orientationTimeSeriesPentagons,
       List<double> tiltTimeSeriesPentagons,
+      List<int> timestampPentagons,
       List<String> files});
 }
 
@@ -178,10 +194,12 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
     Object? deltaDistanceTimeSeriesLoops = null,
     Object? orientationTimeSeriesLoops = null,
     Object? tiltTimeSeriesLoops = null,
+    Object? timestampLoops = null,
     Object? pressureTimeSeriesPentagons = null,
     Object? deltaDistanceTimeSeriesPentagons = null,
     Object? orientationTimeSeriesPentagons = null,
     Object? tiltTimeSeriesPentagons = null,
+    Object? timestampPentagons = null,
     Object? files = null,
   }) {
     return _then(_$LoggerStateImpl(
@@ -209,6 +227,10 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
           ? _value._tiltTimeSeriesLoops
           : tiltTimeSeriesLoops // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      timestampLoops: null == timestampLoops
+          ? _value._timestampLoops
+          : timestampLoops // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       pressureTimeSeriesPentagons: null == pressureTimeSeriesPentagons
           ? _value._pressureTimeSeriesPentagons
           : pressureTimeSeriesPentagons // ignore: cast_nullable_to_non_nullable
@@ -225,6 +247,10 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
           ? _value._tiltTimeSeriesPentagons
           : tiltTimeSeriesPentagons // ignore: cast_nullable_to_non_nullable
               as List<double>,
+      timestampPentagons: null == timestampPentagons
+          ? _value._timestampPentagons
+          : timestampPentagons // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       files: null == files
           ? _value._files
           : files // ignore: cast_nullable_to_non_nullable
@@ -243,19 +269,23 @@ class _$LoggerStateImpl implements _LoggerState {
       final List<double> deltaDistanceTimeSeriesLoops = const [],
       final List<double> orientationTimeSeriesLoops = const [],
       final List<double> tiltTimeSeriesLoops = const [],
+      final List<int> timestampLoops = const [],
       final List<double> pressureTimeSeriesPentagons = const [],
       final List<double> deltaDistanceTimeSeriesPentagons = const [],
       final List<double> orientationTimeSeriesPentagons = const [],
       final List<double> tiltTimeSeriesPentagons = const [],
+      final List<int> timestampPentagons = const [],
       final List<String> files = const []})
       : _pressureTimeSeriesLoops = pressureTimeSeriesLoops,
         _deltaDistanceTimeSeriesLoops = deltaDistanceTimeSeriesLoops,
         _orientationTimeSeriesLoops = orientationTimeSeriesLoops,
         _tiltTimeSeriesLoops = tiltTimeSeriesLoops,
+        _timestampLoops = timestampLoops,
         _pressureTimeSeriesPentagons = pressureTimeSeriesPentagons,
         _deltaDistanceTimeSeriesPentagons = deltaDistanceTimeSeriesPentagons,
         _orientationTimeSeriesPentagons = orientationTimeSeriesPentagons,
         _tiltTimeSeriesPentagons = tiltTimeSeriesPentagons,
+        _timestampPentagons = timestampPentagons,
         _files = files;
 
   factory _$LoggerStateImpl.fromJson(Map<String, dynamic> json) =>
@@ -305,6 +335,15 @@ class _$LoggerStateImpl implements _LoggerState {
     return EqualUnmodifiableListView(_tiltTimeSeriesLoops);
   }
 
+  final List<int> _timestampLoops;
+  @override
+  @JsonKey()
+  List<int> get timestampLoops {
+    if (_timestampLoops is EqualUnmodifiableListView) return _timestampLoops;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_timestampLoops);
+  }
+
   final List<double> _pressureTimeSeriesPentagons;
   @override
   @JsonKey()
@@ -345,6 +384,16 @@ class _$LoggerStateImpl implements _LoggerState {
     return EqualUnmodifiableListView(_tiltTimeSeriesPentagons);
   }
 
+  final List<int> _timestampPentagons;
+  @override
+  @JsonKey()
+  List<int> get timestampPentagons {
+    if (_timestampPentagons is EqualUnmodifiableListView)
+      return _timestampPentagons;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_timestampPentagons);
+  }
+
   final List<String> _files;
   @override
   @JsonKey()
@@ -356,7 +405,7 @@ class _$LoggerStateImpl implements _LoggerState {
 
   @override
   String toString() {
-    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeriesLoops: $pressureTimeSeriesLoops, deltaDistanceTimeSeriesLoops: $deltaDistanceTimeSeriesLoops, orientationTimeSeriesLoops: $orientationTimeSeriesLoops, tiltTimeSeriesLoops: $tiltTimeSeriesLoops, pressureTimeSeriesPentagons: $pressureTimeSeriesPentagons, deltaDistanceTimeSeriesPentagons: $deltaDistanceTimeSeriesPentagons, orientationTimeSeriesPentagons: $orientationTimeSeriesPentagons, tiltTimeSeriesPentagons: $tiltTimeSeriesPentagons, files: $files)';
+    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeriesLoops: $pressureTimeSeriesLoops, deltaDistanceTimeSeriesLoops: $deltaDistanceTimeSeriesLoops, orientationTimeSeriesLoops: $orientationTimeSeriesLoops, tiltTimeSeriesLoops: $tiltTimeSeriesLoops, timestampLoops: $timestampLoops, pressureTimeSeriesPentagons: $pressureTimeSeriesPentagons, deltaDistanceTimeSeriesPentagons: $deltaDistanceTimeSeriesPentagons, orientationTimeSeriesPentagons: $orientationTimeSeriesPentagons, tiltTimeSeriesPentagons: $tiltTimeSeriesPentagons, timestampPentagons: $timestampPentagons, files: $files)';
   }
 
   @override
@@ -378,6 +427,8 @@ class _$LoggerStateImpl implements _LoggerState {
                 _orientationTimeSeriesLoops) &&
             const DeepCollectionEquality()
                 .equals(other._tiltTimeSeriesLoops, _tiltTimeSeriesLoops) &&
+            const DeepCollectionEquality()
+                .equals(other._timestampLoops, _timestampLoops) &&
             const DeepCollectionEquality().equals(
                 other._pressureTimeSeriesPentagons,
                 _pressureTimeSeriesPentagons) &&
@@ -389,6 +440,8 @@ class _$LoggerStateImpl implements _LoggerState {
                 _orientationTimeSeriesPentagons) &&
             const DeepCollectionEquality().equals(
                 other._tiltTimeSeriesPentagons, _tiltTimeSeriesPentagons) &&
+            const DeepCollectionEquality()
+                .equals(other._timestampPentagons, _timestampPentagons) &&
             const DeepCollectionEquality().equals(other._files, _files));
   }
 
@@ -402,10 +455,12 @@ class _$LoggerStateImpl implements _LoggerState {
       const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesLoops),
       const DeepCollectionEquality().hash(_orientationTimeSeriesLoops),
       const DeepCollectionEquality().hash(_tiltTimeSeriesLoops),
+      const DeepCollectionEquality().hash(_timestampLoops),
       const DeepCollectionEquality().hash(_pressureTimeSeriesPentagons),
       const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesPentagons),
       const DeepCollectionEquality().hash(_orientationTimeSeriesPentagons),
       const DeepCollectionEquality().hash(_tiltTimeSeriesPentagons),
+      const DeepCollectionEquality().hash(_timestampPentagons),
       const DeepCollectionEquality().hash(_files));
 
   @JsonKey(ignore: true)
@@ -430,10 +485,12 @@ abstract class _LoggerState implements LoggerState {
       final List<double> deltaDistanceTimeSeriesLoops,
       final List<double> orientationTimeSeriesLoops,
       final List<double> tiltTimeSeriesLoops,
+      final List<int> timestampLoops,
       final List<double> pressureTimeSeriesPentagons,
       final List<double> deltaDistanceTimeSeriesPentagons,
       final List<double> orientationTimeSeriesPentagons,
       final List<double> tiltTimeSeriesPentagons,
+      final List<int> timestampPentagons,
       final List<String> files}) = _$LoggerStateImpl;
 
   factory _LoggerState.fromJson(Map<String, dynamic> json) =
@@ -452,6 +509,8 @@ abstract class _LoggerState implements LoggerState {
   @override
   List<double> get tiltTimeSeriesLoops;
   @override
+  List<int> get timestampLoops;
+  @override
   List<double> get pressureTimeSeriesPentagons;
   @override
   List<double> get deltaDistanceTimeSeriesPentagons;
@@ -459,6 +518,8 @@ abstract class _LoggerState implements LoggerState {
   List<double> get orientationTimeSeriesPentagons;
   @override
   List<double> get tiltTimeSeriesPentagons;
+  @override
+  List<int> get timestampPentagons;
   @override
   List<String> get files;
   @override

@@ -31,8 +31,13 @@ class Logger extends _$Logger {
     );
   }
 
-  void saveTimeSerieses(ScribbleType task, List<double> pressureTs,
-      List<double> deltaTs, List<double> orientationTs, List<double> tiltTs) {
+  void saveTimeSerieses(
+      ScribbleType task,
+      List<double> pressureTs,
+      List<double> deltaTs,
+      List<double> orientationTs,
+      List<double> tiltTs,
+      List<int> timestamps) {
     switch (task) {
       case ScribbleType.loops:
         state = state.copyWith(

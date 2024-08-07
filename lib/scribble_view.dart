@@ -29,6 +29,7 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
   final List<double> deltaDistanceTimeSeries = [];
   final List<double> orientationTimeSeries = [];
   final List<double> tiltTimeSeries = [];
+  final List<int> timestamps = [];
 
   @override
   void initState() {
@@ -106,6 +107,7 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
     deltaDistanceTimeSeries.add(e.delta.distance);
     orientationTimeSeries.add(e.orientation);
     tiltTimeSeries.add(e.tilt);
+    timestamps.add(e.timeStamp.inMilliseconds);
   }
 
   void saveData() {
@@ -117,7 +119,8 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
         pressureTimeSeries,
         deltaDistanceTimeSeries,
         orientationTimeSeries,
-        tiltTimeSeries);
+        tiltTimeSeries,
+        timestamps);
   }
 
   void moveToNextView() {

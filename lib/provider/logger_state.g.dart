@@ -29,6 +29,10 @@ _$LoggerStateImpl _$$LoggerStateImplFromJson(Map<String, dynamic> json) =>
               ?.map((e) => (e as num).toDouble())
               .toList() ??
           const [],
+      timestampLoops: (json['timestampLoops'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
       pressureTimeSeriesPentagons:
           (json['pressureTimeSeriesPentagons'] as List<dynamic>?)
                   ?.map((e) => (e as num).toDouble())
@@ -49,6 +53,10 @@ _$LoggerStateImpl _$$LoggerStateImplFromJson(Map<String, dynamic> json) =>
                   ?.map((e) => (e as num).toDouble())
                   .toList() ??
               const [],
+      timestampPentagons: (json['timestampPentagons'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
       files:
           (json['files'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const [],
@@ -62,10 +70,12 @@ Map<String, dynamic> _$$LoggerStateImplToJson(_$LoggerStateImpl instance) =>
       'deltaDistanceTimeSeriesLoops': instance.deltaDistanceTimeSeriesLoops,
       'orientationTimeSeriesLoops': instance.orientationTimeSeriesLoops,
       'tiltTimeSeriesLoops': instance.tiltTimeSeriesLoops,
+      'timestampLoops': instance.timestampLoops,
       'pressureTimeSeriesPentagons': instance.pressureTimeSeriesPentagons,
       'deltaDistanceTimeSeriesPentagons':
           instance.deltaDistanceTimeSeriesPentagons,
       'orientationTimeSeriesPentagons': instance.orientationTimeSeriesPentagons,
       'tiltTimeSeriesPentagons': instance.tiltTimeSeriesPentagons,
+      'timestampPentagons': instance.timestampPentagons,
       'files': instance.files,
     };
