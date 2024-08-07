@@ -8,10 +8,17 @@ class LoggerState with _$LoggerState {
   const factory LoggerState({
     required String participantID,
     required String startTime,
-    @Default([]) List<double> pressureTimeSeries,
+    @Default([]) List<double> pressureTimeSeriesLoops,
+    @Default([]) List<double> deltaDistanceTimeSeriesLoops,
+    @Default([]) List<double> orientationTimeSeriesLoops,
+    @Default([]) List<double> tiltTimeSeriesLoops,
+    @Default([]) List<double> pressureTimeSeriesPentagons,
+    @Default([]) List<double> deltaDistanceTimeSeriesPentagons,
+    @Default([]) List<double> orientationTimeSeriesPentagons,
+    @Default([]) List<double> tiltTimeSeriesPentagons,
     @Default([]) List<String> files,
   }) = _LoggerState;
 
-  factory LoggerState.fromJson(Map<String, Object?> json)
-      => _$LoggerStateFromJson(json);
+  factory LoggerState.fromJson(Map<String, Object?> json) =>
+      _$LoggerStateFromJson(json);
 }

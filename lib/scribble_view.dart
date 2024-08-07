@@ -26,6 +26,9 @@ class ScribbleView extends ConsumerStatefulWidget {
 class _ScribbleViewState extends ConsumerState<ScribbleView> {
   late ScribbleNotifier notifier;
   final List<double> pressureTimeSeries = [];
+  final List<double> deltaDistanceTimeSeries = [];
+  final List<double> orientationTimeSeries = [];
+  final List<double> tiltTimeSeries = [];
 
   @override
   void initState() {
@@ -100,15 +103,21 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
 
   void logPointerMoveEvent(PointerMoveEvent e) {
     pressureTimeSeries.add(e.pressure);
+    deltaDistanceTimeSeries.add(e.delta.distance);
+    orientationTimeSeries.add(e.orientation);
+    tiltTimeSeries.add(e.tilt);
   }
 
   void saveData() {
     ref.read(loggerProvider.notifier).saveImage(notifier.renderImage(),
         "${widget.taskTypeList[0].toString()}_scribble.png");
 
-    ref
-        .read(loggerProvider.notifier)
-        .savePressureTimeSeries(pressureTimeSeries);
+    ref.read(loggerProvider.notifier).saveTimeSerieses(
+        widget.taskTypeList[0],
+        pressureTimeSeries,
+        deltaDistanceTimeSeries,
+        orientationTimeSeries,
+        tiltTimeSeries);
   }
 
   void moveToNextView() {
