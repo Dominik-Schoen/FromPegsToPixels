@@ -45,6 +45,7 @@ class Logger extends _$Logger {
           deltaDistanceTimeSeriesLoops: deltaTs,
           orientationTimeSeriesLoops: orientationTs,
           tiltTimeSeriesLoops: tiltTs,
+          timestampLoops: timestamps,
         );
         break;
       case ScribbleType.pentagons:
@@ -53,6 +54,7 @@ class Logger extends _$Logger {
           deltaDistanceTimeSeriesPentagons: deltaTs,
           orientationTimeSeriesPentagons: orientationTs,
           tiltTimeSeriesPentagons: tiltTs,
+          timestampPentagons: timestamps,
         );
         break;
     }
