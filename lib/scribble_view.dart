@@ -8,7 +8,9 @@ import 'package:scribble/scribble.dart';
 
 enum ScribbleType {
   loops,
-  pentagons;
+  pentagons,
+  spiral,
+  luria;
 
   @override
   String toString() => name;
@@ -38,11 +40,22 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
     super.initState();
   }
 
+  String getTaskFilePath(ScribbleType task) {
+    switch (task) {
+      case ScribbleType.loops:
+        return 'assets/img/muster2.png';
+      case ScribbleType.pentagons:
+        return 'assets/img/muster1.png';
+      case ScribbleType.spiral:
+        return 'assets/img/muster4.png';
+      case ScribbleType.luria:
+        return 'assets/img/muster3.png';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
-    final String taskFilePath = widget.taskTypeList[0] == ScribbleType.loops
-        ? 'assets/img/muster2.png'
-        : 'assets/img/muster1.png';
+    final String taskFilePath = getTaskFilePath(widget.taskTypeList[0]);
 
     return Scaffold(
       appBar: AppBar(

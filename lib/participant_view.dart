@@ -7,7 +7,8 @@ class ParticipantView extends ConsumerStatefulWidget {
   const ParticipantView({super.key});
 
   @override
-  ConsumerState<ConsumerStatefulWidget> createState() => _ParticipantViewState();
+  ConsumerState<ConsumerStatefulWidget> createState() =>
+      _ParticipantViewState();
 }
 
 class _ParticipantViewState extends ConsumerState<ParticipantView> {
@@ -58,7 +59,8 @@ class _ParticipantViewState extends ConsumerState<ParticipantView> {
                 context,
                 MaterialPageRoute(
                   builder: (_) => ScribbleView(
-                    taskTypeList: ScribbleTypeExtension.generateRandomUniqueOrder(2),
+                    taskTypeList:
+                        ScribbleTypeExtension.generateRandomUniqueOrder(4),
                   ),
                 ),
               );

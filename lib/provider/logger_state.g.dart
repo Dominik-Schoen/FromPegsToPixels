@@ -57,6 +57,52 @@ _$LoggerStateImpl _$$LoggerStateImplFromJson(Map<String, dynamic> json) =>
               ?.map((e) => (e as num).toInt())
               .toList() ??
           const [],
+      pressureTimeSeriesLuria:
+          (json['pressureTimeSeriesLuria'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      deltaDistanceTimeSeriesLuria:
+          (json['deltaDistanceTimeSeriesLuria'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      orientationTimeSeriesLuria:
+          (json['orientationTimeSeriesLuria'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      tiltTimeSeriesLuria: (json['tiltTimeSeriesLuria'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      timestampLuria: (json['timestampLuria'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
+      pressureTimeSeriesSpiral:
+          (json['pressureTimeSeriesSpiral'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      deltaDistanceTimeSeriesSpiral:
+          (json['deltaDistanceTimeSeriesSpiral'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      orientationTimeSeriesSpiral:
+          (json['orientationTimeSeriesSpiral'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      tiltTimeSeriesSpiral: (json['tiltTimeSeriesSpiral'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      timestampSpiral: (json['timestampSpiral'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
       files:
           (json['files'] as List<dynamic>?)?.map((e) => e as String).toList() ??
               const [],
@@ -77,5 +123,15 @@ Map<String, dynamic> _$$LoggerStateImplToJson(_$LoggerStateImpl instance) =>
       'orientationTimeSeriesPentagons': instance.orientationTimeSeriesPentagons,
       'tiltTimeSeriesPentagons': instance.tiltTimeSeriesPentagons,
       'timestampPentagons': instance.timestampPentagons,
+      'pressureTimeSeriesLuria': instance.pressureTimeSeriesLuria,
+      'deltaDistanceTimeSeriesLuria': instance.deltaDistanceTimeSeriesLuria,
+      'orientationTimeSeriesLuria': instance.orientationTimeSeriesLuria,
+      'tiltTimeSeriesLuria': instance.tiltTimeSeriesLuria,
+      'timestampLuria': instance.timestampLuria,
+      'pressureTimeSeriesSpiral': instance.pressureTimeSeriesSpiral,
+      'deltaDistanceTimeSeriesSpiral': instance.deltaDistanceTimeSeriesSpiral,
+      'orientationTimeSeriesSpiral': instance.orientationTimeSeriesSpiral,
+      'tiltTimeSeriesSpiral': instance.tiltTimeSeriesSpiral,
+      'timestampSpiral': instance.timestampSpiral,
       'files': instance.files,
     };

@@ -39,6 +39,22 @@ mixin _$LoggerState {
   List<double> get tiltTimeSeriesPentagons =>
       throw _privateConstructorUsedError;
   List<int> get timestampPentagons => throw _privateConstructorUsedError;
+  List<double> get pressureTimeSeriesLuria =>
+      throw _privateConstructorUsedError;
+  List<double> get deltaDistanceTimeSeriesLuria =>
+      throw _privateConstructorUsedError;
+  List<double> get orientationTimeSeriesLuria =>
+      throw _privateConstructorUsedError;
+  List<double> get tiltTimeSeriesLuria => throw _privateConstructorUsedError;
+  List<int> get timestampLuria => throw _privateConstructorUsedError;
+  List<double> get pressureTimeSeriesSpiral =>
+      throw _privateConstructorUsedError;
+  List<double> get deltaDistanceTimeSeriesSpiral =>
+      throw _privateConstructorUsedError;
+  List<double> get orientationTimeSeriesSpiral =>
+      throw _privateConstructorUsedError;
+  List<double> get tiltTimeSeriesSpiral => throw _privateConstructorUsedError;
+  List<int> get timestampSpiral => throw _privateConstructorUsedError;
   List<String> get files => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -66,6 +82,16 @@ abstract class $LoggerStateCopyWith<$Res> {
       List<double> orientationTimeSeriesPentagons,
       List<double> tiltTimeSeriesPentagons,
       List<int> timestampPentagons,
+      List<double> pressureTimeSeriesLuria,
+      List<double> deltaDistanceTimeSeriesLuria,
+      List<double> orientationTimeSeriesLuria,
+      List<double> tiltTimeSeriesLuria,
+      List<int> timestampLuria,
+      List<double> pressureTimeSeriesSpiral,
+      List<double> deltaDistanceTimeSeriesSpiral,
+      List<double> orientationTimeSeriesSpiral,
+      List<double> tiltTimeSeriesSpiral,
+      List<int> timestampSpiral,
       List<String> files});
 }
 
@@ -94,6 +120,16 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
     Object? orientationTimeSeriesPentagons = null,
     Object? tiltTimeSeriesPentagons = null,
     Object? timestampPentagons = null,
+    Object? pressureTimeSeriesLuria = null,
+    Object? deltaDistanceTimeSeriesLuria = null,
+    Object? orientationTimeSeriesLuria = null,
+    Object? tiltTimeSeriesLuria = null,
+    Object? timestampLuria = null,
+    Object? pressureTimeSeriesSpiral = null,
+    Object? deltaDistanceTimeSeriesSpiral = null,
+    Object? orientationTimeSeriesSpiral = null,
+    Object? tiltTimeSeriesSpiral = null,
+    Object? timestampSpiral = null,
     Object? files = null,
   }) {
     return _then(_value.copyWith(
@@ -145,6 +181,46 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
           ? _value.timestampPentagons
           : timestampPentagons // ignore: cast_nullable_to_non_nullable
               as List<int>,
+      pressureTimeSeriesLuria: null == pressureTimeSeriesLuria
+          ? _value.pressureTimeSeriesLuria
+          : pressureTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      deltaDistanceTimeSeriesLuria: null == deltaDistanceTimeSeriesLuria
+          ? _value.deltaDistanceTimeSeriesLuria
+          : deltaDistanceTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      orientationTimeSeriesLuria: null == orientationTimeSeriesLuria
+          ? _value.orientationTimeSeriesLuria
+          : orientationTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      tiltTimeSeriesLuria: null == tiltTimeSeriesLuria
+          ? _value.tiltTimeSeriesLuria
+          : tiltTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      timestampLuria: null == timestampLuria
+          ? _value.timestampLuria
+          : timestampLuria // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      pressureTimeSeriesSpiral: null == pressureTimeSeriesSpiral
+          ? _value.pressureTimeSeriesSpiral
+          : pressureTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      deltaDistanceTimeSeriesSpiral: null == deltaDistanceTimeSeriesSpiral
+          ? _value.deltaDistanceTimeSeriesSpiral
+          : deltaDistanceTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      orientationTimeSeriesSpiral: null == orientationTimeSeriesSpiral
+          ? _value.orientationTimeSeriesSpiral
+          : orientationTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      tiltTimeSeriesSpiral: null == tiltTimeSeriesSpiral
+          ? _value.tiltTimeSeriesSpiral
+          : tiltTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      timestampSpiral: null == timestampSpiral
+          ? _value.timestampSpiral
+          : timestampSpiral // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       files: null == files
           ? _value.files
           : files // ignore: cast_nullable_to_non_nullable
@@ -174,6 +250,16 @@ abstract class _$$LoggerStateImplCopyWith<$Res>
       List<double> orientationTimeSeriesPentagons,
       List<double> tiltTimeSeriesPentagons,
       List<int> timestampPentagons,
+      List<double> pressureTimeSeriesLuria,
+      List<double> deltaDistanceTimeSeriesLuria,
+      List<double> orientationTimeSeriesLuria,
+      List<double> tiltTimeSeriesLuria,
+      List<int> timestampLuria,
+      List<double> pressureTimeSeriesSpiral,
+      List<double> deltaDistanceTimeSeriesSpiral,
+      List<double> orientationTimeSeriesSpiral,
+      List<double> tiltTimeSeriesSpiral,
+      List<int> timestampSpiral,
       List<String> files});
 }
 
@@ -200,6 +286,16 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
     Object? orientationTimeSeriesPentagons = null,
     Object? tiltTimeSeriesPentagons = null,
     Object? timestampPentagons = null,
+    Object? pressureTimeSeriesLuria = null,
+    Object? deltaDistanceTimeSeriesLuria = null,
+    Object? orientationTimeSeriesLuria = null,
+    Object? tiltTimeSeriesLuria = null,
+    Object? timestampLuria = null,
+    Object? pressureTimeSeriesSpiral = null,
+    Object? deltaDistanceTimeSeriesSpiral = null,
+    Object? orientationTimeSeriesSpiral = null,
+    Object? tiltTimeSeriesSpiral = null,
+    Object? timestampSpiral = null,
     Object? files = null,
   }) {
     return _then(_$LoggerStateImpl(
@@ -251,6 +347,46 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
           ? _value._timestampPentagons
           : timestampPentagons // ignore: cast_nullable_to_non_nullable
               as List<int>,
+      pressureTimeSeriesLuria: null == pressureTimeSeriesLuria
+          ? _value._pressureTimeSeriesLuria
+          : pressureTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      deltaDistanceTimeSeriesLuria: null == deltaDistanceTimeSeriesLuria
+          ? _value._deltaDistanceTimeSeriesLuria
+          : deltaDistanceTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      orientationTimeSeriesLuria: null == orientationTimeSeriesLuria
+          ? _value._orientationTimeSeriesLuria
+          : orientationTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      tiltTimeSeriesLuria: null == tiltTimeSeriesLuria
+          ? _value._tiltTimeSeriesLuria
+          : tiltTimeSeriesLuria // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      timestampLuria: null == timestampLuria
+          ? _value._timestampLuria
+          : timestampLuria // ignore: cast_nullable_to_non_nullable
+              as List<int>,
+      pressureTimeSeriesSpiral: null == pressureTimeSeriesSpiral
+          ? _value._pressureTimeSeriesSpiral
+          : pressureTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      deltaDistanceTimeSeriesSpiral: null == deltaDistanceTimeSeriesSpiral
+          ? _value._deltaDistanceTimeSeriesSpiral
+          : deltaDistanceTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      orientationTimeSeriesSpiral: null == orientationTimeSeriesSpiral
+          ? _value._orientationTimeSeriesSpiral
+          : orientationTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      tiltTimeSeriesSpiral: null == tiltTimeSeriesSpiral
+          ? _value._tiltTimeSeriesSpiral
+          : tiltTimeSeriesSpiral // ignore: cast_nullable_to_non_nullable
+              as List<double>,
+      timestampSpiral: null == timestampSpiral
+          ? _value._timestampSpiral
+          : timestampSpiral // ignore: cast_nullable_to_non_nullable
+              as List<int>,
       files: null == files
           ? _value._files
           : files // ignore: cast_nullable_to_non_nullable
@@ -275,6 +411,16 @@ class _$LoggerStateImpl implements _LoggerState {
       final List<double> orientationTimeSeriesPentagons = const [],
       final List<double> tiltTimeSeriesPentagons = const [],
       final List<int> timestampPentagons = const [],
+      final List<double> pressureTimeSeriesLuria = const [],
+      final List<double> deltaDistanceTimeSeriesLuria = const [],
+      final List<double> orientationTimeSeriesLuria = const [],
+      final List<double> tiltTimeSeriesLuria = const [],
+      final List<int> timestampLuria = const [],
+      final List<double> pressureTimeSeriesSpiral = const [],
+      final List<double> deltaDistanceTimeSeriesSpiral = const [],
+      final List<double> orientationTimeSeriesSpiral = const [],
+      final List<double> tiltTimeSeriesSpiral = const [],
+      final List<int> timestampSpiral = const [],
       final List<String> files = const []})
       : _pressureTimeSeriesLoops = pressureTimeSeriesLoops,
         _deltaDistanceTimeSeriesLoops = deltaDistanceTimeSeriesLoops,
@@ -286,6 +432,16 @@ class _$LoggerStateImpl implements _LoggerState {
         _orientationTimeSeriesPentagons = orientationTimeSeriesPentagons,
         _tiltTimeSeriesPentagons = tiltTimeSeriesPentagons,
         _timestampPentagons = timestampPentagons,
+        _pressureTimeSeriesLuria = pressureTimeSeriesLuria,
+        _deltaDistanceTimeSeriesLuria = deltaDistanceTimeSeriesLuria,
+        _orientationTimeSeriesLuria = orientationTimeSeriesLuria,
+        _tiltTimeSeriesLuria = tiltTimeSeriesLuria,
+        _timestampLuria = timestampLuria,
+        _pressureTimeSeriesSpiral = pressureTimeSeriesSpiral,
+        _deltaDistanceTimeSeriesSpiral = deltaDistanceTimeSeriesSpiral,
+        _orientationTimeSeriesSpiral = orientationTimeSeriesSpiral,
+        _tiltTimeSeriesSpiral = tiltTimeSeriesSpiral,
+        _timestampSpiral = timestampSpiral,
         _files = files;
 
   factory _$LoggerStateImpl.fromJson(Map<String, dynamic> json) =>
@@ -394,6 +550,104 @@ class _$LoggerStateImpl implements _LoggerState {
     return EqualUnmodifiableListView(_timestampPentagons);
   }
 
+  final List<double> _pressureTimeSeriesLuria;
+  @override
+  @JsonKey()
+  List<double> get pressureTimeSeriesLuria {
+    if (_pressureTimeSeriesLuria is EqualUnmodifiableListView)
+      return _pressureTimeSeriesLuria;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pressureTimeSeriesLuria);
+  }
+
+  final List<double> _deltaDistanceTimeSeriesLuria;
+  @override
+  @JsonKey()
+  List<double> get deltaDistanceTimeSeriesLuria {
+    if (_deltaDistanceTimeSeriesLuria is EqualUnmodifiableListView)
+      return _deltaDistanceTimeSeriesLuria;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_deltaDistanceTimeSeriesLuria);
+  }
+
+  final List<double> _orientationTimeSeriesLuria;
+  @override
+  @JsonKey()
+  List<double> get orientationTimeSeriesLuria {
+    if (_orientationTimeSeriesLuria is EqualUnmodifiableListView)
+      return _orientationTimeSeriesLuria;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_orientationTimeSeriesLuria);
+  }
+
+  final List<double> _tiltTimeSeriesLuria;
+  @override
+  @JsonKey()
+  List<double> get tiltTimeSeriesLuria {
+    if (_tiltTimeSeriesLuria is EqualUnmodifiableListView)
+      return _tiltTimeSeriesLuria;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tiltTimeSeriesLuria);
+  }
+
+  final List<int> _timestampLuria;
+  @override
+  @JsonKey()
+  List<int> get timestampLuria {
+    if (_timestampLuria is EqualUnmodifiableListView) return _timestampLuria;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_timestampLuria);
+  }
+
+  final List<double> _pressureTimeSeriesSpiral;
+  @override
+  @JsonKey()
+  List<double> get pressureTimeSeriesSpiral {
+    if (_pressureTimeSeriesSpiral is EqualUnmodifiableListView)
+      return _pressureTimeSeriesSpiral;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_pressureTimeSeriesSpiral);
+  }
+
+  final List<double> _deltaDistanceTimeSeriesSpiral;
+  @override
+  @JsonKey()
+  List<double> get deltaDistanceTimeSeriesSpiral {
+    if (_deltaDistanceTimeSeriesSpiral is EqualUnmodifiableListView)
+      return _deltaDistanceTimeSeriesSpiral;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_deltaDistanceTimeSeriesSpiral);
+  }
+
+  final List<double> _orientationTimeSeriesSpiral;
+  @override
+  @JsonKey()
+  List<double> get orientationTimeSeriesSpiral {
+    if (_orientationTimeSeriesSpiral is EqualUnmodifiableListView)
+      return _orientationTimeSeriesSpiral;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_orientationTimeSeriesSpiral);
+  }
+
+  final List<double> _tiltTimeSeriesSpiral;
+  @override
+  @JsonKey()
+  List<double> get tiltTimeSeriesSpiral {
+    if (_tiltTimeSeriesSpiral is EqualUnmodifiableListView)
+      return _tiltTimeSeriesSpiral;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_tiltTimeSeriesSpiral);
+  }
+
+  final List<int> _timestampSpiral;
+  @override
+  @JsonKey()
+  List<int> get timestampSpiral {
+    if (_timestampSpiral is EqualUnmodifiableListView) return _timestampSpiral;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_timestampSpiral);
+  }
+
   final List<String> _files;
   @override
   @JsonKey()
@@ -405,7 +659,7 @@ class _$LoggerStateImpl implements _LoggerState {
 
   @override
   String toString() {
-    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeriesLoops: $pressureTimeSeriesLoops, deltaDistanceTimeSeriesLoops: $deltaDistanceTimeSeriesLoops, orientationTimeSeriesLoops: $orientationTimeSeriesLoops, tiltTimeSeriesLoops: $tiltTimeSeriesLoops, timestampLoops: $timestampLoops, pressureTimeSeriesPentagons: $pressureTimeSeriesPentagons, deltaDistanceTimeSeriesPentagons: $deltaDistanceTimeSeriesPentagons, orientationTimeSeriesPentagons: $orientationTimeSeriesPentagons, tiltTimeSeriesPentagons: $tiltTimeSeriesPentagons, timestampPentagons: $timestampPentagons, files: $files)';
+    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeriesLoops: $pressureTimeSeriesLoops, deltaDistanceTimeSeriesLoops: $deltaDistanceTimeSeriesLoops, orientationTimeSeriesLoops: $orientationTimeSeriesLoops, tiltTimeSeriesLoops: $tiltTimeSeriesLoops, timestampLoops: $timestampLoops, pressureTimeSeriesPentagons: $pressureTimeSeriesPentagons, deltaDistanceTimeSeriesPentagons: $deltaDistanceTimeSeriesPentagons, orientationTimeSeriesPentagons: $orientationTimeSeriesPentagons, tiltTimeSeriesPentagons: $tiltTimeSeriesPentagons, timestampPentagons: $timestampPentagons, pressureTimeSeriesLuria: $pressureTimeSeriesLuria, deltaDistanceTimeSeriesLuria: $deltaDistanceTimeSeriesLuria, orientationTimeSeriesLuria: $orientationTimeSeriesLuria, tiltTimeSeriesLuria: $tiltTimeSeriesLuria, timestampLuria: $timestampLuria, pressureTimeSeriesSpiral: $pressureTimeSeriesSpiral, deltaDistanceTimeSeriesSpiral: $deltaDistanceTimeSeriesSpiral, orientationTimeSeriesSpiral: $orientationTimeSeriesSpiral, tiltTimeSeriesSpiral: $tiltTimeSeriesSpiral, timestampSpiral: $timestampSpiral, files: $files)';
   }
 
   @override
@@ -442,26 +696,61 @@ class _$LoggerStateImpl implements _LoggerState {
                 other._tiltTimeSeriesPentagons, _tiltTimeSeriesPentagons) &&
             const DeepCollectionEquality()
                 .equals(other._timestampPentagons, _timestampPentagons) &&
+            const DeepCollectionEquality().equals(
+                other._pressureTimeSeriesLuria, _pressureTimeSeriesLuria) &&
+            const DeepCollectionEquality().equals(
+                other._deltaDistanceTimeSeriesLuria,
+                _deltaDistanceTimeSeriesLuria) &&
+            const DeepCollectionEquality().equals(
+                other._orientationTimeSeriesLuria,
+                _orientationTimeSeriesLuria) &&
+            const DeepCollectionEquality()
+                .equals(other._tiltTimeSeriesLuria, _tiltTimeSeriesLuria) &&
+            const DeepCollectionEquality()
+                .equals(other._timestampLuria, _timestampLuria) &&
+            const DeepCollectionEquality().equals(
+                other._pressureTimeSeriesSpiral, _pressureTimeSeriesSpiral) &&
+            const DeepCollectionEquality().equals(
+                other._deltaDistanceTimeSeriesSpiral,
+                _deltaDistanceTimeSeriesSpiral) &&
+            const DeepCollectionEquality().equals(
+                other._orientationTimeSeriesSpiral,
+                _orientationTimeSeriesSpiral) &&
+            const DeepCollectionEquality()
+                .equals(other._tiltTimeSeriesSpiral, _tiltTimeSeriesSpiral) &&
+            const DeepCollectionEquality()
+                .equals(other._timestampSpiral, _timestampSpiral) &&
             const DeepCollectionEquality().equals(other._files, _files));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      participantID,
-      startTime,
-      const DeepCollectionEquality().hash(_pressureTimeSeriesLoops),
-      const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesLoops),
-      const DeepCollectionEquality().hash(_orientationTimeSeriesLoops),
-      const DeepCollectionEquality().hash(_tiltTimeSeriesLoops),
-      const DeepCollectionEquality().hash(_timestampLoops),
-      const DeepCollectionEquality().hash(_pressureTimeSeriesPentagons),
-      const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesPentagons),
-      const DeepCollectionEquality().hash(_orientationTimeSeriesPentagons),
-      const DeepCollectionEquality().hash(_tiltTimeSeriesPentagons),
-      const DeepCollectionEquality().hash(_timestampPentagons),
-      const DeepCollectionEquality().hash(_files));
+  int get hashCode => Object.hashAll([
+        runtimeType,
+        participantID,
+        startTime,
+        const DeepCollectionEquality().hash(_pressureTimeSeriesLoops),
+        const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesLoops),
+        const DeepCollectionEquality().hash(_orientationTimeSeriesLoops),
+        const DeepCollectionEquality().hash(_tiltTimeSeriesLoops),
+        const DeepCollectionEquality().hash(_timestampLoops),
+        const DeepCollectionEquality().hash(_pressureTimeSeriesPentagons),
+        const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesPentagons),
+        const DeepCollectionEquality().hash(_orientationTimeSeriesPentagons),
+        const DeepCollectionEquality().hash(_tiltTimeSeriesPentagons),
+        const DeepCollectionEquality().hash(_timestampPentagons),
+        const DeepCollectionEquality().hash(_pressureTimeSeriesLuria),
+        const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesLuria),
+        const DeepCollectionEquality().hash(_orientationTimeSeriesLuria),
+        const DeepCollectionEquality().hash(_tiltTimeSeriesLuria),
+        const DeepCollectionEquality().hash(_timestampLuria),
+        const DeepCollectionEquality().hash(_pressureTimeSeriesSpiral),
+        const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesSpiral),
+        const DeepCollectionEquality().hash(_orientationTimeSeriesSpiral),
+        const DeepCollectionEquality().hash(_tiltTimeSeriesSpiral),
+        const DeepCollectionEquality().hash(_timestampSpiral),
+        const DeepCollectionEquality().hash(_files)
+      ]);
 
   @JsonKey(ignore: true)
   @override
@@ -491,6 +780,16 @@ abstract class _LoggerState implements LoggerState {
       final List<double> orientationTimeSeriesPentagons,
       final List<double> tiltTimeSeriesPentagons,
       final List<int> timestampPentagons,
+      final List<double> pressureTimeSeriesLuria,
+      final List<double> deltaDistanceTimeSeriesLuria,
+      final List<double> orientationTimeSeriesLuria,
+      final List<double> tiltTimeSeriesLuria,
+      final List<int> timestampLuria,
+      final List<double> pressureTimeSeriesSpiral,
+      final List<double> deltaDistanceTimeSeriesSpiral,
+      final List<double> orientationTimeSeriesSpiral,
+      final List<double> tiltTimeSeriesSpiral,
+      final List<int> timestampSpiral,
       final List<String> files}) = _$LoggerStateImpl;
 
   factory _LoggerState.fromJson(Map<String, dynamic> json) =
@@ -520,6 +819,26 @@ abstract class _LoggerState implements LoggerState {
   List<double> get tiltTimeSeriesPentagons;
   @override
   List<int> get timestampPentagons;
+  @override
+  List<double> get pressureTimeSeriesLuria;
+  @override
+  List<double> get deltaDistanceTimeSeriesLuria;
+  @override
+  List<double> get orientationTimeSeriesLuria;
+  @override
+  List<double> get tiltTimeSeriesLuria;
+  @override
+  List<int> get timestampLuria;
+  @override
+  List<double> get pressureTimeSeriesSpiral;
+  @override
+  List<double> get deltaDistanceTimeSeriesSpiral;
+  @override
+  List<double> get orientationTimeSeriesSpiral;
+  @override
+  List<double> get tiltTimeSeriesSpiral;
+  @override
+  List<int> get timestampSpiral;
   @override
   List<String> get files;
   @override

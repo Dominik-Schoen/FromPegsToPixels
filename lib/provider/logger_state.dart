@@ -18,6 +18,16 @@ class LoggerState with _$LoggerState {
     @Default([]) List<double> orientationTimeSeriesPentagons,
     @Default([]) List<double> tiltTimeSeriesPentagons,
     @Default([]) List<int> timestampPentagons,
+    @Default([]) List<double> pressureTimeSeriesLuria,
+    @Default([]) List<double> deltaDistanceTimeSeriesLuria,
+    @Default([]) List<double> orientationTimeSeriesLuria,
+    @Default([]) List<double> tiltTimeSeriesLuria,
+    @Default([]) List<int> timestampLuria,
+    @Default([]) List<double> pressureTimeSeriesSpiral,
+    @Default([]) List<double> deltaDistanceTimeSeriesSpiral,
+    @Default([]) List<double> orientationTimeSeriesSpiral,
+    @Default([]) List<double> tiltTimeSeriesSpiral,
+    @Default([]) List<int> timestampSpiral,
     @Default([]) List<String> files,
   }) = _LoggerState;
 

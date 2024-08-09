@@ -57,6 +57,24 @@ class Logger extends _$Logger {
           timestampPentagons: timestamps,
         );
         break;
+      case ScribbleType.luria:
+        state = state.copyWith(
+          pressureTimeSeriesLuria: pressureTs,
+          deltaDistanceTimeSeriesLuria: deltaTs,
+          orientationTimeSeriesLuria: orientationTs,
+          tiltTimeSeriesLuria: tiltTs,
+          timestampLuria: timestamps,
+        );
+        break;
+      case ScribbleType.spiral:
+        state = state.copyWith(
+          pressureTimeSeriesSpiral: pressureTs,
+          deltaDistanceTimeSeriesSpiral: deltaTs,
+          orientationTimeSeriesSpiral: orientationTs,
+          tiltTimeSeriesSpiral: tiltTs,
+          timestampSpiral: timestamps,
+        );
+        break;
     }
   }
 
