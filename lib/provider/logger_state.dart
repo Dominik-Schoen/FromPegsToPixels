@@ -8,6 +8,7 @@ class LoggerState with _$LoggerState {
   const factory LoggerState({
     required String participantID,
     required String startTime,
+    required String borg,
     @Default([]) List<double> pressureTimeSeriesLoops,
     @Default([]) List<double> deltaDistanceTimeSeriesLoops,
     @Default([]) List<double> orientationTimeSeriesLoops,

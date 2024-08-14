@@ -22,6 +22,7 @@ LoggerState _$LoggerStateFromJson(Map<String, dynamic> json) {
 mixin _$LoggerState {
   String get participantID => throw _privateConstructorUsedError;
   String get startTime => throw _privateConstructorUsedError;
+  String get borg => throw _privateConstructorUsedError;
   List<double> get pressureTimeSeriesLoops =>
       throw _privateConstructorUsedError;
   List<double> get deltaDistanceTimeSeriesLoops =>
@@ -72,6 +73,7 @@ abstract class $LoggerStateCopyWith<$Res> {
   $Res call(
       {String participantID,
       String startTime,
+      String borg,
       List<double> pressureTimeSeriesLoops,
       List<double> deltaDistanceTimeSeriesLoops,
       List<double> orientationTimeSeriesLoops,
@@ -110,6 +112,7 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
   $Res call({
     Object? participantID = null,
     Object? startTime = null,
+    Object? borg = null,
     Object? pressureTimeSeriesLoops = null,
     Object? deltaDistanceTimeSeriesLoops = null,
     Object? orientationTimeSeriesLoops = null,
@@ -140,6 +143,10 @@ class _$LoggerStateCopyWithImpl<$Res, $Val extends LoggerState>
       startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      borg: null == borg
+          ? _value.borg
+          : borg // ignore: cast_nullable_to_non_nullable
               as String,
       pressureTimeSeriesLoops: null == pressureTimeSeriesLoops
           ? _value.pressureTimeSeriesLoops
@@ -240,6 +247,7 @@ abstract class _$$LoggerStateImplCopyWith<$Res>
   $Res call(
       {String participantID,
       String startTime,
+      String borg,
       List<double> pressureTimeSeriesLoops,
       List<double> deltaDistanceTimeSeriesLoops,
       List<double> orientationTimeSeriesLoops,
@@ -276,6 +284,7 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
   $Res call({
     Object? participantID = null,
     Object? startTime = null,
+    Object? borg = null,
     Object? pressureTimeSeriesLoops = null,
     Object? deltaDistanceTimeSeriesLoops = null,
     Object? orientationTimeSeriesLoops = null,
@@ -306,6 +315,10 @@ class __$$LoggerStateImplCopyWithImpl<$Res>
       startTime: null == startTime
           ? _value.startTime
           : startTime // ignore: cast_nullable_to_non_nullable
+              as String,
+      borg: null == borg
+          ? _value.borg
+          : borg // ignore: cast_nullable_to_non_nullable
               as String,
       pressureTimeSeriesLoops: null == pressureTimeSeriesLoops
           ? _value._pressureTimeSeriesLoops
@@ -401,6 +414,7 @@ class _$LoggerStateImpl implements _LoggerState {
   const _$LoggerStateImpl(
       {required this.participantID,
       required this.startTime,
+      required this.borg,
       final List<double> pressureTimeSeriesLoops = const [],
       final List<double> deltaDistanceTimeSeriesLoops = const [],
       final List<double> orientationTimeSeriesLoops = const [],
@@ -451,6 +465,8 @@ class _$LoggerStateImpl implements _LoggerState {
   final String participantID;
   @override
   final String startTime;
+  @override
+  final String borg;
   final List<double> _pressureTimeSeriesLoops;
   @override
   @JsonKey()
@@ -659,7 +675,7 @@ class _$LoggerStateImpl implements _LoggerState {
 
   @override
   String toString() {
-    return 'LoggerState(participantID: $participantID, startTime: $startTime, pressureTimeSeriesLoops: $pressureTimeSeriesLoops, deltaDistanceTimeSeriesLoops: $deltaDistanceTimeSeriesLoops, orientationTimeSeriesLoops: $orientationTimeSeriesLoops, tiltTimeSeriesLoops: $tiltTimeSeriesLoops, timestampLoops: $timestampLoops, pressureTimeSeriesPentagons: $pressureTimeSeriesPentagons, deltaDistanceTimeSeriesPentagons: $deltaDistanceTimeSeriesPentagons, orientationTimeSeriesPentagons: $orientationTimeSeriesPentagons, tiltTimeSeriesPentagons: $tiltTimeSeriesPentagons, timestampPentagons: $timestampPentagons, pressureTimeSeriesLuria: $pressureTimeSeriesLuria, deltaDistanceTimeSeriesLuria: $deltaDistanceTimeSeriesLuria, orientationTimeSeriesLuria: $orientationTimeSeriesLuria, tiltTimeSeriesLuria: $tiltTimeSeriesLuria, timestampLuria: $timestampLuria, pressureTimeSeriesSpiral: $pressureTimeSeriesSpiral, deltaDistanceTimeSeriesSpiral: $deltaDistanceTimeSeriesSpiral, orientationTimeSeriesSpiral: $orientationTimeSeriesSpiral, tiltTimeSeriesSpiral: $tiltTimeSeriesSpiral, timestampSpiral: $timestampSpiral, files: $files)';
+    return 'LoggerState(participantID: $participantID, startTime: $startTime, borg: $borg, pressureTimeSeriesLoops: $pressureTimeSeriesLoops, deltaDistanceTimeSeriesLoops: $deltaDistanceTimeSeriesLoops, orientationTimeSeriesLoops: $orientationTimeSeriesLoops, tiltTimeSeriesLoops: $tiltTimeSeriesLoops, timestampLoops: $timestampLoops, pressureTimeSeriesPentagons: $pressureTimeSeriesPentagons, deltaDistanceTimeSeriesPentagons: $deltaDistanceTimeSeriesPentagons, orientationTimeSeriesPentagons: $orientationTimeSeriesPentagons, tiltTimeSeriesPentagons: $tiltTimeSeriesPentagons, timestampPentagons: $timestampPentagons, pressureTimeSeriesLuria: $pressureTimeSeriesLuria, deltaDistanceTimeSeriesLuria: $deltaDistanceTimeSeriesLuria, orientationTimeSeriesLuria: $orientationTimeSeriesLuria, tiltTimeSeriesLuria: $tiltTimeSeriesLuria, timestampLuria: $timestampLuria, pressureTimeSeriesSpiral: $pressureTimeSeriesSpiral, deltaDistanceTimeSeriesSpiral: $deltaDistanceTimeSeriesSpiral, orientationTimeSeriesSpiral: $orientationTimeSeriesSpiral, tiltTimeSeriesSpiral: $tiltTimeSeriesSpiral, timestampSpiral: $timestampSpiral, files: $files)';
   }
 
   @override
@@ -671,6 +687,7 @@ class _$LoggerStateImpl implements _LoggerState {
                 other.participantID == participantID) &&
             (identical(other.startTime, startTime) ||
                 other.startTime == startTime) &&
+            (identical(other.borg, borg) || other.borg == borg) &&
             const DeepCollectionEquality().equals(
                 other._pressureTimeSeriesLoops, _pressureTimeSeriesLoops) &&
             const DeepCollectionEquality().equals(
@@ -729,6 +746,7 @@ class _$LoggerStateImpl implements _LoggerState {
         runtimeType,
         participantID,
         startTime,
+        borg,
         const DeepCollectionEquality().hash(_pressureTimeSeriesLoops),
         const DeepCollectionEquality().hash(_deltaDistanceTimeSeriesLoops),
         const DeepCollectionEquality().hash(_orientationTimeSeriesLoops),
@@ -770,6 +788,7 @@ abstract class _LoggerState implements LoggerState {
   const factory _LoggerState(
       {required final String participantID,
       required final String startTime,
+      required final String borg,
       final List<double> pressureTimeSeriesLoops,
       final List<double> deltaDistanceTimeSeriesLoops,
       final List<double> orientationTimeSeriesLoops,
@@ -799,6 +818,8 @@ abstract class _LoggerState implements LoggerState {
   String get participantID;
   @override
   String get startTime;
+  @override
+  String get borg;
   @override
   List<double> get pressureTimeSeriesLoops;
   @override

@@ -41,6 +41,7 @@ class _BorgViewState extends ConsumerState<BorgView> {
         actions: <Widget>[
           FilledButton(
             onPressed: () {
+              ref.read(loggerProvider.notifier).setBorgValue(_borg!);
               ref.read(loggerProvider.notifier).saveMetaFile("meta.json");
 
               Navigator.pushAndRemoveUntil(

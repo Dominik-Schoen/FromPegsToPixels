@@ -10,6 +10,7 @@ _$LoggerStateImpl _$$LoggerStateImplFromJson(Map<String, dynamic> json) =>
     _$LoggerStateImpl(
       participantID: json['participantID'] as String,
       startTime: json['startTime'] as String,
+      borg: json['borg'] as String,
       pressureTimeSeriesLoops:
           (json['pressureTimeSeriesLoops'] as List<dynamic>?)
                   ?.map((e) => (e as num).toDouble())
@@ -112,6 +113,7 @@ Map<String, dynamic> _$$LoggerStateImplToJson(_$LoggerStateImpl instance) =>
     <String, dynamic>{
       'participantID': instance.participantID,
       'startTime': instance.startTime,
+      'borg': instance.borg,
       'pressureTimeSeriesLoops': instance.pressureTimeSeriesLoops,
       'deltaDistanceTimeSeriesLoops': instance.deltaDistanceTimeSeriesLoops,
       'orientationTimeSeriesLoops': instance.orientationTimeSeriesLoops,

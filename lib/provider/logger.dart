@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
+import 'package:fartigue/borg_view.dart';
 import 'package:fartigue/provider/logger_state.dart';
 import 'package:fartigue/scribble_view.dart';
 import 'package:flutter/material.dart';
@@ -17,6 +18,7 @@ class Logger extends _$Logger {
   LoggerState build() {
     return LoggerState(
       participantID: "-1",
+      borg: "-1",
       startTime: DateFormat("yyyy-MM-dd_HH-mm-ss_").format(DateTime.now()),
     );
   }
@@ -29,6 +31,10 @@ class Logger extends _$Logger {
     state = state.copyWith(
       startTime: DateFormat("yyyy-MM-dd_HH-mm-ss_").format(DateTime.now()),
     );
+  }
+
+  void setBorgValue(Borg b) {
+    state = state.copyWith(borg: b.toString());
   }
 
   void saveTimeSerieses(
@@ -107,6 +113,7 @@ class Logger extends _$Logger {
   void reset() {
     state = LoggerState(
       participantID: "-1",
+      borg: "-1",
       startTime: DateTime.now().toString(),
     );
   }

@@ -6,7 +6,7 @@ part of 'logger.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$loggerHash() => r'75e5d48ac69838bd05e39cd7a028f5113bc0a00f';
+String _$loggerHash() => r'a7a10146ed5570ed199f395ce9f7427f78f47ec4';
 
 /// See also [Logger].
 @ProviderFor(Logger)
