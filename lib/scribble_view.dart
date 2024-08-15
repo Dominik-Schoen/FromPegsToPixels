@@ -35,7 +35,9 @@ class _ScribbleViewState extends ConsumerState<ScribbleView> {
 
   @override
   void initState() {
-    notifier = ScribbleNotifier();
+    notifier = ScribbleNotifier(
+      allowedPointersMode: ScribblePointerMode.penOnly,
+    );
     notifier.setStrokeWidth(3);
     super.initState();
   }
