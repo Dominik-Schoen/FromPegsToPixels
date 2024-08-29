@@ -43,48 +43,71 @@ class Logger extends _$Logger {
       List<double> deltaTs,
       List<double> orientationTs,
       List<double> tiltTs,
-      List<int> timestamps) {
+      List<int> timestamps,
+      List<double> dx,
+      List<double> dy,
+      List<double> x,
+      List<double> y) {
     switch (task) {
-      case ScribbleType.loops:
+      case ScribbleType.loopsTouch:
         state = state.copyWith(
-          pressureTimeSeriesLoops: pressureTs,
-          deltaDistanceTimeSeriesLoops: deltaTs,
-          orientationTimeSeriesLoops: orientationTs,
-          tiltTimeSeriesLoops: tiltTs,
-          timestampLoops: timestamps,
+          pressureTimeSeriesLoopsTouch: pressureTs,
+          deltaDistanceTimeSeriesLoopsTouch: deltaTs,
+          orientationTimeSeriesLoopsTouch: orientationTs,
+          tiltTimeSeriesLoopsTouch: tiltTs,
+          timestampLoopsTouch: timestamps,
+          dxTimeSeriesLoopsTouch: dx,
+          dyTimeSeriesLoopsTouch: dy,
+          xTimeSeriesLoopsTouch: x,
+          yTimeSeriesLoopsTouch: y,
         );
         break;
-      case ScribbleType.pentagons:
+      case ScribbleType.spiralTouch:
         state = state.copyWith(
-          pressureTimeSeriesPentagons: pressureTs,
-          deltaDistanceTimeSeriesPentagons: deltaTs,
-          orientationTimeSeriesPentagons: orientationTs,
-          tiltTimeSeriesPentagons: tiltTs,
-          timestampPentagons: timestamps,
+          pressureTimeSeriesSpiralTouch: pressureTs,
+          deltaDistanceTimeSeriesSpiralTouch: deltaTs,
+          orientationTimeSeriesSpiralTouch: orientationTs,
+          tiltTimeSeriesSpiralTouch: tiltTs,
+          timestampSpiralTouch: timestamps,
+          dxTimeSeriesSpiralTouch: dx,
+          dyTimeSeriesSpiralTouch: dy,
+          xTimeSeriesSpiralTouch: x,
+          yTimeSeriesSpiralTouch: y,
         );
         break;
-      case ScribbleType.luria:
+      case ScribbleType.loopsPen:
         state = state.copyWith(
-          pressureTimeSeriesLuria: pressureTs,
-          deltaDistanceTimeSeriesLuria: deltaTs,
-          orientationTimeSeriesLuria: orientationTs,
-          tiltTimeSeriesLuria: tiltTs,
-          timestampLuria: timestamps,
+          pressureTimeSeriesLoopsPen: pressureTs,
+          deltaDistanceTimeSeriesLoopsPen: deltaTs,
+          orientationTimeSeriesLoopsPen: orientationTs,
+          tiltTimeSeriesLoopsPen: tiltTs,
+          timestampLoopsPen: timestamps,
+          dxTimeSeriesLoopsPen: dx,
+          dyTimeSeriesLoopsPen: dy,
+          xTimeSeriesLoopsPen: x,
+          yTimeSeriesLoopsPen: y,
         );
         break;
-      case ScribbleType.spiral:
+      case ScribbleType.spiralPen:
         state = state.copyWith(
-          pressureTimeSeriesSpiral: pressureTs,
-          deltaDistanceTimeSeriesSpiral: deltaTs,
-          orientationTimeSeriesSpiral: orientationTs,
-          tiltTimeSeriesSpiral: tiltTs,
-          timestampSpiral: timestamps,
+          pressureTimeSeriesSpiralPen: pressureTs,
+          deltaDistanceTimeSeriesSpiralPen: deltaTs,
+          orientationTimeSeriesSpiralPen: orientationTs,
+          tiltTimeSeriesSpiralPen: tiltTs,
+          timestampSpiralPen: timestamps,
+          dxTimeSeriesSpiralPen: dx,
+          dyTimeSeriesSpiralPen: dy,
+          xTimeSeriesSpiralPen: x,
+          yTimeSeriesSpiralPen: y,
         );
         break;
     }
   }
 
   void saveImage(Future<ByteData> image, String fileName) async {
+    state = state
+        .copyWith(files: [...state.files, _getFileNamePrefix() + fileName]);
+
     ByteData imageData = await image;
     final buffer = imageData.buffer;
     final Directory downloadsDir = await getApplicationDocumentsDirectory();
@@ -92,8 +115,6 @@ class Logger extends _$Logger {
         (path.join(downloadsDir.path, _getFileNamePrefix() + fileName));
     await File(filePath).writeAsBytes(
         buffer.asUint8List(imageData.offsetInBytes, imageData.lengthInBytes));
-    state = state
-        .copyWith(files: [...state.files, _getFileNamePrefix() + fileName]);
     debugPrint("Save image with ${imageData.lengthInBytes} bytes to $filePath");
   }
 

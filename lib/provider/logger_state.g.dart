@@ -11,96 +11,164 @@ _$LoggerStateImpl _$$LoggerStateImplFromJson(Map<String, dynamic> json) =>
       participantID: json['participantID'] as String,
       startTime: json['startTime'] as String,
       borg: json['borg'] as String,
-      pressureTimeSeriesLoops:
-          (json['pressureTimeSeriesLoops'] as List<dynamic>?)
+      pressureTimeSeriesLoopsTouch:
+          (json['pressureTimeSeriesLoopsTouch'] as List<dynamic>?)
                   ?.map((e) => (e as num).toDouble())
                   .toList() ??
               const [],
-      deltaDistanceTimeSeriesLoops:
-          (json['deltaDistanceTimeSeriesLoops'] as List<dynamic>?)
+      deltaDistanceTimeSeriesLoopsTouch:
+          (json['deltaDistanceTimeSeriesLoopsTouch'] as List<dynamic>?)
                   ?.map((e) => (e as num).toDouble())
                   .toList() ??
               const [],
-      orientationTimeSeriesLoops:
-          (json['orientationTimeSeriesLoops'] as List<dynamic>?)
+      orientationTimeSeriesLoopsTouch:
+          (json['orientationTimeSeriesLoopsTouch'] as List<dynamic>?)
                   ?.map((e) => (e as num).toDouble())
                   .toList() ??
               const [],
-      tiltTimeSeriesLoops: (json['tiltTimeSeriesLoops'] as List<dynamic>?)
+      tiltTimeSeriesLoopsTouch:
+          (json['tiltTimeSeriesLoopsTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      dxTimeSeriesLoopsTouch: (json['dxTimeSeriesLoopsTouch'] as List<dynamic>?)
               ?.map((e) => (e as num).toDouble())
               .toList() ??
           const [],
-      timestampLoops: (json['timestampLoops'] as List<dynamic>?)
-              ?.map((e) => (e as num).toInt())
-              .toList() ??
-          const [],
-      pressureTimeSeriesPentagons:
-          (json['pressureTimeSeriesPentagons'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      deltaDistanceTimeSeriesPentagons:
-          (json['deltaDistanceTimeSeriesPentagons'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      orientationTimeSeriesPentagons:
-          (json['orientationTimeSeriesPentagons'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      tiltTimeSeriesPentagons:
-          (json['tiltTimeSeriesPentagons'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      timestampPentagons: (json['timestampPentagons'] as List<dynamic>?)
-              ?.map((e) => (e as num).toInt())
-              .toList() ??
-          const [],
-      pressureTimeSeriesLuria:
-          (json['pressureTimeSeriesLuria'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      deltaDistanceTimeSeriesLuria:
-          (json['deltaDistanceTimeSeriesLuria'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      orientationTimeSeriesLuria:
-          (json['orientationTimeSeriesLuria'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      tiltTimeSeriesLuria: (json['tiltTimeSeriesLuria'] as List<dynamic>?)
+      dyTimeSeriesLoopsTouch: (json['dyTimeSeriesLoopsTouch'] as List<dynamic>?)
               ?.map((e) => (e as num).toDouble())
               .toList() ??
           const [],
-      timestampLuria: (json['timestampLuria'] as List<dynamic>?)
-              ?.map((e) => (e as num).toInt())
-              .toList() ??
-          const [],
-      pressureTimeSeriesSpiral:
-          (json['pressureTimeSeriesSpiral'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      deltaDistanceTimeSeriesSpiral:
-          (json['deltaDistanceTimeSeriesSpiral'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      orientationTimeSeriesSpiral:
-          (json['orientationTimeSeriesSpiral'] as List<dynamic>?)
-                  ?.map((e) => (e as num).toDouble())
-                  .toList() ??
-              const [],
-      tiltTimeSeriesSpiral: (json['tiltTimeSeriesSpiral'] as List<dynamic>?)
+      xTimeSeriesLoopsTouch: (json['xTimeSeriesLoopsTouch'] as List<dynamic>?)
               ?.map((e) => (e as num).toDouble())
               .toList() ??
           const [],
-      timestampSpiral: (json['timestampSpiral'] as List<dynamic>?)
+      yTimeSeriesLoopsTouch: (json['yTimeSeriesLoopsTouch'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      timestampLoopsTouch: (json['timestampLoopsTouch'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
+      pressureTimeSeriesSpiralTouch:
+          (json['pressureTimeSeriesSpiralTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      deltaDistanceTimeSeriesSpiralTouch:
+          (json['deltaDistanceTimeSeriesSpiralTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      orientationTimeSeriesSpiralTouch:
+          (json['orientationTimeSeriesSpiralTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      tiltTimeSeriesSpiralTouch:
+          (json['tiltTimeSeriesSpiralTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      dxTimeSeriesSpiralTouch:
+          (json['dxTimeSeriesSpiralTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      dyTimeSeriesSpiralTouch:
+          (json['dyTimeSeriesSpiralTouch'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      xTimeSeriesSpiralTouch: (json['xTimeSeriesSpiralTouch'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      yTimeSeriesSpiralTouch: (json['yTimeSeriesSpiralTouch'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      timestampSpiralTouch: (json['timestampSpiralTouch'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
+      pressureTimeSeriesLoopsPen:
+          (json['pressureTimeSeriesLoopsPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      deltaDistanceTimeSeriesLoopsPen:
+          (json['deltaDistanceTimeSeriesLoopsPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      orientationTimeSeriesLoopsPen:
+          (json['orientationTimeSeriesLoopsPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      tiltTimeSeriesLoopsPen: (json['tiltTimeSeriesLoopsPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      dxTimeSeriesLoopsPen: (json['dxTimeSeriesLoopsPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      dyTimeSeriesLoopsPen: (json['dyTimeSeriesLoopsPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      xTimeSeriesLoopsPen: (json['xTimeSeriesLoopsPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      yTimeSeriesLoopsPen: (json['yTimeSeriesLoopsPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      timestampLoopsPen: (json['timestampLoopsPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toInt())
+              .toList() ??
+          const [],
+      pressureTimeSeriesSpiralPen:
+          (json['pressureTimeSeriesSpiralPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      deltaDistanceTimeSeriesSpiralPen:
+          (json['deltaDistanceTimeSeriesSpiralPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      orientationTimeSeriesSpiralPen:
+          (json['orientationTimeSeriesSpiralPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      tiltTimeSeriesSpiralPen:
+          (json['tiltTimeSeriesSpiralPen'] as List<dynamic>?)
+                  ?.map((e) => (e as num).toDouble())
+                  .toList() ??
+              const [],
+      dxTimeSeriesSpiralPen: (json['dxTimeSeriesSpiralPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      dyTimeSeriesSpiralPen: (json['dyTimeSeriesSpiralPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      xTimeSeriesSpiralPen: (json['xTimeSeriesSpiralPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      yTimeSeriesSpiralPen: (json['yTimeSeriesSpiralPen'] as List<dynamic>?)
+              ?.map((e) => (e as num).toDouble())
+              .toList() ??
+          const [],
+      timestampSpiralPen: (json['timestampSpiralPen'] as List<dynamic>?)
               ?.map((e) => (e as num).toInt())
               .toList() ??
           const [],
@@ -114,26 +182,47 @@ Map<String, dynamic> _$$LoggerStateImplToJson(_$LoggerStateImpl instance) =>
       'participantID': instance.participantID,
       'startTime': instance.startTime,
       'borg': instance.borg,
-      'pressureTimeSeriesLoops': instance.pressureTimeSeriesLoops,
-      'deltaDistanceTimeSeriesLoops': instance.deltaDistanceTimeSeriesLoops,
-      'orientationTimeSeriesLoops': instance.orientationTimeSeriesLoops,
-      'tiltTimeSeriesLoops': instance.tiltTimeSeriesLoops,
-      'timestampLoops': instance.timestampLoops,
-      'pressureTimeSeriesPentagons': instance.pressureTimeSeriesPentagons,
-      'deltaDistanceTimeSeriesPentagons':
-          instance.deltaDistanceTimeSeriesPentagons,
-      'orientationTimeSeriesPentagons': instance.orientationTimeSeriesPentagons,
-      'tiltTimeSeriesPentagons': instance.tiltTimeSeriesPentagons,
-      'timestampPentagons': instance.timestampPentagons,
-      'pressureTimeSeriesLuria': instance.pressureTimeSeriesLuria,
-      'deltaDistanceTimeSeriesLuria': instance.deltaDistanceTimeSeriesLuria,
-      'orientationTimeSeriesLuria': instance.orientationTimeSeriesLuria,
-      'tiltTimeSeriesLuria': instance.tiltTimeSeriesLuria,
-      'timestampLuria': instance.timestampLuria,
-      'pressureTimeSeriesSpiral': instance.pressureTimeSeriesSpiral,
-      'deltaDistanceTimeSeriesSpiral': instance.deltaDistanceTimeSeriesSpiral,
-      'orientationTimeSeriesSpiral': instance.orientationTimeSeriesSpiral,
-      'tiltTimeSeriesSpiral': instance.tiltTimeSeriesSpiral,
-      'timestampSpiral': instance.timestampSpiral,
+      'pressureTimeSeriesLoopsTouch': instance.pressureTimeSeriesLoopsTouch,
+      'deltaDistanceTimeSeriesLoopsTouch':
+          instance.deltaDistanceTimeSeriesLoopsTouch,
+      'orientationTimeSeriesLoopsTouch':
+          instance.orientationTimeSeriesLoopsTouch,
+      'tiltTimeSeriesLoopsTouch': instance.tiltTimeSeriesLoopsTouch,
+      'dxTimeSeriesLoopsTouch': instance.dxTimeSeriesLoopsTouch,
+      'dyTimeSeriesLoopsTouch': instance.dyTimeSeriesLoopsTouch,
+      'xTimeSeriesLoopsTouch': instance.xTimeSeriesLoopsTouch,
+      'yTimeSeriesLoopsTouch': instance.yTimeSeriesLoopsTouch,
+      'timestampLoopsTouch': instance.timestampLoopsTouch,
+      'pressureTimeSeriesSpiralTouch': instance.pressureTimeSeriesSpiralTouch,
+      'deltaDistanceTimeSeriesSpiralTouch':
+          instance.deltaDistanceTimeSeriesSpiralTouch,
+      'orientationTimeSeriesSpiralTouch':
+          instance.orientationTimeSeriesSpiralTouch,
+      'tiltTimeSeriesSpiralTouch': instance.tiltTimeSeriesSpiralTouch,
+      'dxTimeSeriesSpiralTouch': instance.dxTimeSeriesSpiralTouch,
+      'dyTimeSeriesSpiralTouch': instance.dyTimeSeriesSpiralTouch,
+      'xTimeSeriesSpiralTouch': instance.xTimeSeriesSpiralTouch,
+      'yTimeSeriesSpiralTouch': instance.yTimeSeriesSpiralTouch,
+      'timestampSpiralTouch': instance.timestampSpiralTouch,
+      'pressureTimeSeriesLoopsPen': instance.pressureTimeSeriesLoopsPen,
+      'deltaDistanceTimeSeriesLoopsPen':
+          instance.deltaDistanceTimeSeriesLoopsPen,
+      'orientationTimeSeriesLoopsPen': instance.orientationTimeSeriesLoopsPen,
+      'tiltTimeSeriesLoopsPen': instance.tiltTimeSeriesLoopsPen,
+      'dxTimeSeriesLoopsPen': instance.dxTimeSeriesLoopsPen,
+      'dyTimeSeriesLoopsPen': instance.dyTimeSeriesLoopsPen,
+      'xTimeSeriesLoopsPen': instance.xTimeSeriesLoopsPen,
+      'yTimeSeriesLoopsPen': instance.yTimeSeriesLoopsPen,
+      'timestampLoopsPen': instance.timestampLoopsPen,
+      'pressureTimeSeriesSpiralPen': instance.pressureTimeSeriesSpiralPen,
+      'deltaDistanceTimeSeriesSpiralPen':
+          instance.deltaDistanceTimeSeriesSpiralPen,
+      'orientationTimeSeriesSpiralPen': instance.orientationTimeSeriesSpiralPen,
+      'tiltTimeSeriesSpiralPen': instance.tiltTimeSeriesSpiralPen,
+      'dxTimeSeriesSpiralPen': instance.dxTimeSeriesSpiralPen,
+      'dyTimeSeriesSpiralPen': instance.dyTimeSeriesSpiralPen,
+      'xTimeSeriesSpiralPen': instance.xTimeSeriesSpiralPen,
+      'yTimeSeriesSpiralPen': instance.yTimeSeriesSpiralPen,
+      'timestampSpiralPen': instance.timestampSpiralPen,
       'files': instance.files,
     };

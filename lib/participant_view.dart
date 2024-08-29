@@ -14,6 +14,12 @@ class ParticipantView extends ConsumerStatefulWidget {
 class _ParticipantViewState extends ConsumerState<ParticipantView> {
   final _textEditingController = TextEditingController();
 
+  void _onButtonPressed(int number) {
+    setState(() {
+      _textEditingController.text = number.toString();
+    });
+  }
+
   @override
   void dispose() {
     _textEditingController.dispose();
@@ -75,17 +81,54 @@ class _ParticipantViewState extends ConsumerState<ParticipantView> {
         ],
       ),
       body: Center(
-        child: SizedBox(
-          width: 200,
-          child: TextField(
-            autofocus: true,
-            controller: _textEditingController,
-            decoration: const InputDecoration(
-              border: UnderlineInputBorder(),
-              labelText: "Participant ID",
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            // Grid of Buttons
+            SizedBox(
+              width: 400,
+              height: 400, // Adjust height as needed
+              child: GridView.builder(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 5, // 5 columns
+                  childAspectRatio: 1.0,
+                ),
+                itemCount: 20,
+                itemBuilder: (context, index) {
+                  int number = index + 1;
+                  return ElevatedButton(
+                    onPressed: () => _onButtonPressed(number),
+                    child: Text(number.toString()),
+                  );
+                },
+              ),
             ),
-          ),
+            // TextField
+            SizedBox(
+              width: 200,
+              child: TextField(
+                autofocus: true,
+                controller: _textEditingController,
+                decoration: const InputDecoration(
+                  border: UnderlineInputBorder(),
+                  labelText: "Participant ID",
+                ),
+              ),
+            ),
+          ],
         ),
+
+        // SizedBox(
+        //   width: 200,
+        //   child: TextField(
+        //     autofocus: true,
+        //     controller: _textEditingController,
+        //     decoration: const InputDecoration(
+        //       border: UnderlineInputBorder(),
+        //       labelText: "Participant ID",
+        //     ),
+        //   ),
+        // ),
       ),
     );
   }
