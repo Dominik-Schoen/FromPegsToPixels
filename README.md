@@ -2,7 +2,6 @@
 
 This is the Flutter project used in the publication "From Pegs To Pixels"
 
----
 
 ## Prerequisites
 
@@ -14,7 +13,6 @@ Before you begin, make sure you have the following:
 - An Apple ID linked to a developer account (free or paid)
 - An iPad with Apple Pencil support (connected via USB or Wi-Fi)
 
----
 
 ## Setup Instructions
 
@@ -32,7 +30,6 @@ flutter doctor
 
 Follow the output to fix any missing dependencies.
 
----
 
 ### 2. Clone the Repository
 
@@ -40,7 +37,6 @@ Follow the output to fix any missing dependencies.
 git clone https://github.com/Dominik-Schoen/FromPegsToPixels
 ```
 
----
 
 ### 3. Download Flutter Dependencies
 
@@ -52,7 +48,6 @@ flutter pub get
 
 This will install all the Dart and Flutter package dependencies.
 
----
 
 ### 4. Connect Your iPad
 
@@ -64,7 +59,6 @@ This will install all the Dart and Flutter package dependencies.
 flutter devices
 ```
 
----
 
 ### 5. Run the App on iPad
 
@@ -88,7 +82,6 @@ flutter devices
 
 Make sure your iPad is unlocked and trusted. The app will compile and launch directly onto the device.
 
----
 
 ## Cite the work
 
@@ -99,10 +92,7 @@ for Fine Motor Control Assessment. Proc. ACM Hum.-Comput. Interact. 9, 5, Articl
 29 pages. https://doi.org/10.1145/3743714
 ```
 
----
 
 ## License
 
 This project is licensed under the MIT License.
-
----
