@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "fartigue" "\0"
+            VALUE "FileDescription", "pegstopixels" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "fartigue" "\0"
+            VALUE "InternalName", "pegstopixels" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "fartigue.exe" "\0"
-            VALUE "ProductName", "fartigue" "\0"
+            VALUE "OriginalFilename", "pegstopixels.exe" "\0"
+            VALUE "ProductName", "pegstopixels" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

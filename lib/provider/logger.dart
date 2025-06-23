@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'dart:io';
 import 'dart:typed_data';
-import 'package:fartigue/borg_view.dart';
-import 'package:fartigue/provider/logger_state.dart';
-import 'package:fartigue/scribble_view.dart';
+import 'package:pegstopixels/borg_view.dart';
+import 'package:pegstopixels/provider/logger_state.dart';
+import 'package:pegstopixels/scribble_view.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:path_provider/path_provider.dart';

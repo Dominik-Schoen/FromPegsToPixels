@@ -1,4 +1,4 @@
-import 'package:fartigue/participant_view.dart';
+import 'package:pegstopixels/participant_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/services.dart';
@@ -6,17 +6,18 @@ import 'package:flutter/services.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
 
-  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((value) {
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
+      .then((value) {
     runApp(
       const ProviderScope(
-        child: FartigueApp(),
+        child: PegsToPixelsApp(),
       ),
     );
   });
 }
 
-class FartigueApp extends StatelessWidget {
-  const FartigueApp({super.key});
+class PegsToPixelsApp extends StatelessWidget {
+  const PegsToPixelsApp({super.key});
 
   @override
   Widget build(BuildContext context) {

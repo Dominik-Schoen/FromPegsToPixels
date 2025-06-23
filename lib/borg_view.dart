@@ -1,5 +1,5 @@
-import 'package:fartigue/participant_view.dart';
-import 'package:fartigue/provider/logger.dart';
+import 'package:pegstopixels/participant_view.dart';
+import 'package:pegstopixels/provider/logger.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

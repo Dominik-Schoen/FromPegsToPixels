@@ -1,4 +1,4 @@
-package com.example.fartigue
+package com.example.pegstopixels
 
 import io.flutter.embedding.android.FlutterActivity
 
